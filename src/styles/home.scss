@@ -126,6 +126,48 @@
     width: 50%;
 }
 
+.sponsors-viewport{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.sponsors-track{
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.4s ease;
+}
+
+.sponsor-item{
+    flex: 0 0 160px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+.sponsor-placeholder{
+    flex: 0 0 160px;
+    height: 100px;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    animation: sponsor-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes sponsor-pulse{
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
 @media (max-width: 500px){
 
     .program-cards{

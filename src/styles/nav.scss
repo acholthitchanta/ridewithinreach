@@ -8,7 +8,6 @@
     position: fixed;
     z-index: 999;
     transition: background-color 1s ease;
-
 }
 
 .navbar:hover{
@@ -30,5 +29,11 @@
 
 .nav-link:hover{
     color: $secondary;
+}
+
+@media (max-width: 500px){
+    .navbar-nav{
+        gap: 0rem;
+    }
 }
 

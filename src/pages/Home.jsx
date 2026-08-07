@@ -8,8 +8,49 @@ import researchandpolicy from "../assets/images/researchandpolicy.jpg"
 import wheelIcon from "../assets/images/logos/wheel.svg"
 import handshakeIcon from "../assets/images/logos/handshake.svg"
 import megaphoneIcon from "../assets/images/logos/megaphone.svg"
+import { useEffect, useState } from "react"
+import { getSponsorsBucket } from "../services/DataService"
+
+const SPONSOR_ITEM_WIDTH = 160
+const SPONSOR_GAP = 32
+const SPONSOR_VISIBLE_COUNT = 4
 
 function Home() {
+
+  const [sponsors, setSponsors] = useState([])
+  const [sponsorsLoading, setSponsorsLoading] = useState(true)
+  const [sponsorStartIndex, setSponsorStartIndex] = useState(0)
+
+  useEffect(()=>{
+
+      async function fetchSponsors(){
+          const sponsorsData = await getSponsorsBucket()
+
+          if (sponsorsData.length == 0){
+            console.log("no sponsors found")
+          }
+
+          console.log(sponsorsData)
+          setSponsors(sponsorsData)
+          setSponsorsLoading(false)
+      }
+
+      fetchSponsors();
+
+  },[])
+
+  useEffect(()=>{
+      if (sponsors.length <= SPONSOR_VISIBLE_COUNT) return
+
+      const maxIndex = sponsors.length - SPONSOR_VISIBLE_COUNT
+
+      const id = setInterval(() => {
+          setSponsorStartIndex((i) => (i + 1) % (maxIndex + 1))
+      }, 2000)
+
+      return () => clearInterval(id)
+  },[sponsors])
+
   return (
     <div>
       <Figure className="landing">
@@ -129,9 +170,26 @@ function Home() {
         </div>
       </div>
 
-      <div className="section-left section green">
+      <div className="section-left section">
         <div className="text">
-          <h1>SUPPORT US</h1>
+          <h1>OUR SUPPORTERS</h1>
+
+          <div className="sponsors-viewport">
+            <div
+              className="sponsors-track"
+              style={{ transform: `translateX(-${sponsorStartIndex * (SPONSOR_ITEM_WIDTH + SPONSOR_GAP)}px)` }}
+            >
+              {sponsorsLoading
+                ? Array.from({ length: SPONSOR_VISIBLE_COUNT }).map((_, i) => (
+                    <div key={i} className="sponsor-placeholder" />
+                  ))
+                : sponsors.map((url) => (
+                    <div key={url} className="sponsor-item">
+                      <img src={url} alt="Sponsor logo" />
+                    </div>
+                  ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
