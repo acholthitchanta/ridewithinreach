@@ -1,0 +1,60 @@
+.figure-caption{
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    font-size: max(5rem, 10vw);
+    width: 70%;
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    padding-left: 4vw;
+    line-height: max(5rem, 10vw);
+}
+
+.figure{
+    margin-bottom: 0;
+}
+
+.figure-img{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 0;
+}
+
+.stat-quote {
+  border-left: 3px solid $secondary;
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+
+  p {
+    font-style: italic;
+    color: $white;
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
+
+.intro-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.circle{
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 5px $primary;
+}
+
+.square{
+    aspect-ratio: 1;
+    object-fit: cover;
+}

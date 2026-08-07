@@ -1,0 +1,96 @@
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/variables";
+
+$primary: #1a3e20;
+$secondary: #828b55;
+
+$theme-colors: map-merge($theme-colors, (
+    "white": #f9f2ea,
+    "white-green": #e4f8df
+));
+
+$white: #f9f2ea;
+$white-green: #e4f8df;
+
+@import "nav.scss";
+@import "home.scss";
+@import "fonts.scss";
+
+*{
+    scrollbar-color: #b0c0a8 $white;
+    scrollbar-width: thin;
+}
+
+.white{
+    background-color: $white;
+    color: $primary;
+}
+
+.green{
+    background-color: $primary;
+    color: white;
+}
+
+.medium-green{
+    background-color: $secondary;
+}
+
+.light-green{
+    background-color: $white-green;
+    color: $primary;
+}
+
+.spacer{
+    height: 100px;
+    width: 100vw;
+}
+
+.scrollbar{
+
+}
+
+*::selection {
+  color: $white;
+  background-color: #061f17;
+}
+
+.text{
+    padding: 5vw;
+}
+.section{
+    height: 100vh;
+
+    h1{
+        font-weight: bold;
+        font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+        font-size: max(2.5rem, 5vw)
+    }
+}
+
+.padded-img{
+    padding: 2vw;
+}
+
+p{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+.section-right{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.section-left{
+    display: flex;
+}
+
+
+@media (max-width: 500px){
+
+    .section{
+        flex-direction: column;
+        height: 100%;
+    }
+
+}

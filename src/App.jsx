@@ -5,8 +5,29 @@ import AboutUs from './pages/AboutUs.jsx'
 import OurWork from './pages/OurWork.jsx'
 import Sponsors from './pages/Sponsors.jsx'
 import Donate from './pages/Donate.jsx'
+import './styles/custom.scss'
+import { useEffect } from 'react'
+import Lenis from 'lenis'
 
 function App() {
+
+  useEffect( ()=>{
+    const lenis = new Lenis({})
+
+    function raf(time){
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    const rafID = requestAnimationFrame(raf)
+
+    return () =>{
+      cancelAnimationFrame(rafID)
+      lenis.destroy();
+    }
+    
+  },[])
+
   return (
     <div>
       <AppNav />

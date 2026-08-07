@@ -1,12 +1,13 @@
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav, Stack } from 'react-bootstrap'
 import { Link } from 'react-router'
 
 function AppNav() {
   return (
     <Navbar bg="light" expand="lg">
+      <Navbar.Brand><img src="/logo.png" width="50px"/></Navbar.Brand>
       <Navbar.Toggle aria-controls="main-nav" />
       <Navbar.Collapse id="main-nav">
-        <Nav>
+        <Nav className="ms-auto">
           <Nav.Link as={Link} to="/">Home</Nav.Link>
           <Nav.Link as={Link} to="/about">About Us</Nav.Link>
           <Nav.Link as={Link} to="/our-work">Our Work</Nav.Link>
