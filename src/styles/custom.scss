@@ -21,6 +21,11 @@ $white-green: #e4f8df;
     scrollbar-width: thin;
 }
 
+html{
+    overflow: hidden;
+}
+
+
 .white{
     background-color: $white;
     color: $primary;

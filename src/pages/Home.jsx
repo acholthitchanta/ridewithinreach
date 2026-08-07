@@ -66,7 +66,7 @@ function Home() {
           <h1>RIDE WITHIN REACH</h1>
           <p>Ride Within Reach is a 501(c)(3) organization based in Northwest Arkansas that
             aims to elevate opportunities for youth to participate in mountain biking.
-            We partner with coaches, mentors, and sponsors to support
+            We partner with coaches, mentors, and local businesses to support
             underrepresented communities who lack the resources necessary to partake in the sport.</p>
         </div>
         <Image src={intro} className="square section-img"/>
@@ -75,7 +75,7 @@ function Home() {
 
       <div className="green section section-left">
         <div className="text">
-          <h1>WHY WE STARTED THIS</h1>
+          <h1>WHY THIS MATTERS</h1>
           <p>
             Higher-income families spend significantly more on their
             child's primary sport each year. This discrepancy shows up
@@ -172,7 +172,7 @@ function Home() {
 
       <div className="section-left section">
         <div className="text">
-          <h1>OUR SUPPORTERS</h1>
+          <h1>OUR COMMUNITY SPONSORS</h1>
 
           <div className="sponsors-viewport">
             <div
