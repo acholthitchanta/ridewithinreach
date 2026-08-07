@@ -2,6 +2,12 @@ import { Card, Image, Figure, Stack } from "react-bootstrap"
 import landing from "../assets/images/landing.jpg"
 import costgraphic from "../assets/images/costgraphic.png"
 import intro from "../assets/images/intro.jpg"
+import gearaccess from "../assets/images/gearaccess.jpg"
+import parterpathways from "../assets/images/parterpathways.jpg"
+import researchandpolicy from "../assets/images/researchandpolicy.jpg"
+import wheelIcon from "../assets/images/logos/wheel.svg"
+import handshakeIcon from "../assets/images/logos/handshake.svg"
+import megaphoneIcon from "../assets/images/logos/megaphone.svg"
 
 function Home() {
   return (
@@ -12,7 +18,7 @@ function Home() {
         />
         <Figure.Caption>Keeping the trail within reach.</Figure.Caption>
       </Figure>
-      <div className="spacer medium-green"/>
+      <div className="spacer green"/>
 
       <div className="white section section-right">
         <div className="intro-text text">
@@ -67,32 +73,56 @@ function Home() {
         <div className="text">
           <h1 className="text-center">OUR PROGRAMS</h1>
 
-          <Stack direction="horizontal" gap={3}>
-              <Card>
-                <Card.Title>Gear Access</Card.Title>
-                <Card.Text>We fund students with all of the equipment they need to ride:
-                  bikes, helmets, safety gear, 
-                  maintenance vouchers, 
-                  and beginner resources.</Card.Text>
+          <Stack direction="horizontal" gap={3} className="program-cards">
+              <Card className="program-card">
+                <div className="program-card-media">
+                  <Card.Img src={gearaccess} />
+                  <span className="program-card-badge">
+                    <img src={wheelIcon} alt="" />
+                  </span>
+                </div>
+                <Card.Body>
+                  <Card.Title>Gear Access</Card.Title>
+                  <Card.Text>We fund students with all of the equipment they need to ride:
+                    bikes, helmets, safety gear,
+                    maintenance vouchers,
+                    and beginner resources.</Card.Text>
+                </Card.Body>
               </Card>
 
-              <Card>
-                <Card.Title>Partner Pathways</Card.Title>
-                <Card.Text>
-                  We connect students and families with our network of 
-                  local shops, coaches, teams, and mentors, giving 
-                  students opportunities to compete and learn about the sport.
-                </Card.Text>
+              <Card className="program-card">
+                <div className="program-card-media">
+                  <Card.Img src={parterpathways} />
+                  <span className="program-card-badge">
+                    <img src={handshakeIcon} alt="" />
+                  </span>
+                </div>
+                <Card.Body>
+                  <Card.Title>Partner Pathways</Card.Title>
+                  <Card.Text>
+                    We connect students and families with our network of
+                    local shops, coaches, teams, and mentors, giving
+                    students opportunities to compete and learn about the sport.
+                  </Card.Text>
+                </Card.Body>
               </Card>
 
-              <Card>
-                <Card.Title>Research & Policy</Card.Title>
-                <Card.Text>
-                  As NWA grows its cities to accommodate for our growing 
-                  population, we risk losing our local bike trails and students' access to them. 
-                  We aim  to advocate preserving and expanding outdoor recreational
-                  spaces for our community as a whole.
-                </Card.Text>
+              <Card className="program-card">
+                <div className="program-card-media">
+                  <Card.Img src={researchandpolicy} />
+                  <span className="program-card-badge">
+                    <img src={megaphoneIcon} alt="" />
+                  </span>
+                </div>
+                <Card.Body>
+                  <Card.Title>Research & Policy</Card.Title>
+                  <Card.Text>
+                    As NWA grows its cities to accommodate for our growing
+                    population, it becomes increasingly vital to advocate
+                    the preservation and continued development of bike trails for
+                    our community.
+                  </Card.Text>
+                </Card.Body>
               </Card>
           </Stack>
         </div>
