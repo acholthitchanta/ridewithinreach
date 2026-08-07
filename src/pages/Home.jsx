@@ -18,7 +18,7 @@ function Home() {
         />
         <Figure.Caption>Keeping the trail within reach.</Figure.Caption>
       </Figure>
-      <div className="spacer green"/>
+      <div className="spacer medium-green"/>
 
       <div className="white section section-right">
         <div className="intro-text text">
@@ -37,15 +37,16 @@ function Home() {
           <h1>WHY WE STARTED THIS</h1>
           <p>
             Higher-income families spend significantly more on their
-            child's primary sport each year. This spending gap shows up
-            in equipment, coaching, travel, and program access.
-            However, this gap is especially apparent in mountain biking, which
-            has a higher starting cost than many other sports.
+            child's primary sport each year. This discrepancy shows up
+            in equipment, coaching, and travel, where financially struggling 
+            students cannot perform as well as their more fortunate peers.
           </p>
           <p>
+            This gap is especially apparent in mountain biking, which
+            has a higher starting cost than many other sports.
             Families will
-            need to afford not just bikes (entry-level mountain bikes can start
-            at $500 minimum!), but safety gear, transportation, and consistent maintenance
+            need to afford not just bikes (which can start
+            at $500 minimum!), but safety gear, transportation, and regular maintenance
             before a student can participate consistently.
           </p>
           <p>
@@ -118,7 +119,7 @@ function Home() {
                   <Card.Title>Research & Policy</Card.Title>
                   <Card.Text>
                     As NWA grows its cities to accommodate for our growing
-                    population, it becomes increasingly vital to advocate
+                    population, we would like to advocate for
                     the preservation and continued development of bike trails for
                     our community.
                   </Card.Text>
