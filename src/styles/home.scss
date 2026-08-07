@@ -126,21 +126,25 @@
     width: 50%;
 }
 
+.sponsors-availability{
+    width: 80vw;
+    margin: 2rem auto 0;
+}
+
 .sponsors-viewport{
     overflow: hidden;
-    width: 100%;
-    margin-top: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .sponsors-track{
     display: flex;
-    gap: 2rem;
+    gap: var(--sponsor-gap);
     transition: transform 0.4s ease;
 }
 
 .sponsor-item{
-    flex: 0 0 160px;
-    height: 150px;
+    flex: 0 0 var(--sponsor-item-width);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,7 +160,7 @@
 }
 
 .sponsor-placeholder{
-    flex: 0 0 160px;
+    flex: 0 0 var(--sponsor-item-width);
     height: 100px;
     border-radius: 0.5rem;
     background-color: rgba(255, 255, 255, 0.15);

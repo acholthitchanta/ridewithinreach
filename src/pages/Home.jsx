@@ -8,18 +8,28 @@ import researchandpolicy from "../assets/images/researchandpolicy.jpg"
 import wheelIcon from "../assets/images/logos/wheel.svg"
 import handshakeIcon from "../assets/images/logos/handshake.svg"
 import megaphoneIcon from "../assets/images/logos/megaphone.svg"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { getSponsorsBucket } from "../services/DataService"
 
 const SPONSOR_ITEM_WIDTH = 160
-const SPONSOR_GAP = 32
-const SPONSOR_VISIBLE_COUNT = 4
+const SPONSOR_GAP = 30
 
 function Home() {
 
   const [sponsors, setSponsors] = useState([])
   const [sponsorsLoading, setSponsorsLoading] = useState(true)
   const [sponsorStartIndex, setSponsorStartIndex] = useState(0)
+  const [sponsorTrackTransitionEnabled, setSponsorTrackTransitionEnabled] = useState(true)
+  const [sponsorAvailableWidth, setSponsorAvailableWidth] = useState(0)
+  const sponsorAvailabilityRef = useRef(null)
+
+  const sponsorVisibleCount = Math.max(
+    1,
+    Math.floor((sponsorAvailableWidth + SPONSOR_GAP) / (SPONSOR_ITEM_WIDTH + SPONSOR_GAP))
+  )
+
+  const sponsorsViewportWidth = sponsorVisibleCount * SPONSOR_ITEM_WIDTH
+    + Math.max(sponsorVisibleCount - 1, 0) * SPONSOR_GAP
 
   useEffect(()=>{
 
@@ -40,16 +50,55 @@ function Home() {
   },[])
 
   useEffect(()=>{
-      if (sponsors.length <= SPONSOR_VISIBLE_COUNT) return
+      const el = sponsorAvailabilityRef.current
+      if (!el) return
 
-      const maxIndex = sponsors.length - SPONSOR_VISIBLE_COUNT
+      const observer = new ResizeObserver((entries) => {
+          setSponsorAvailableWidth(entries[0].contentRect.width)
+      })
+      observer.observe(el)
+
+      return () => observer.disconnect()
+  },[])
+
+  useEffect(()=>{
+      setSponsorTrackTransitionEnabled(false)
+      setSponsorStartIndex(sponsorVisibleCount)
+  },[sponsorVisibleCount])
+
+  useEffect(()=>{
+      if (sponsors.length <= sponsorVisibleCount) return
 
       const id = setInterval(() => {
-          setSponsorStartIndex((i) => (i + 1) % (maxIndex + 1))
+          setSponsorStartIndex((i) => i + 1)
       }, 2000)
 
       return () => clearInterval(id)
-  },[sponsors])
+  },[sponsors, sponsorVisibleCount])
+
+  useEffect(()=>{
+      if (sponsorTrackTransitionEnabled) return
+
+      const rafId = requestAnimationFrame(() => setSponsorTrackTransitionEnabled(true))
+      return () => cancelAnimationFrame(rafId)
+  },[sponsorTrackTransitionEnabled])
+
+  const extendedSponsors = sponsors.length > sponsorVisibleCount
+    ? [
+        ...sponsors.slice(-sponsorVisibleCount),
+        ...sponsors,
+        ...sponsors.slice(0, sponsorVisibleCount),
+      ]
+    : sponsors
+
+  function handleSponsorTrackTransitionEnd(){
+      if (sponsors.length <= sponsorVisibleCount) return
+
+      if (sponsorStartIndex >= sponsors.length + sponsorVisibleCount) {
+          setSponsorTrackTransitionEnabled(false)
+          setSponsorStartIndex(sponsorVisibleCount)
+      }
+  }
 
   return (
     <div>
@@ -170,26 +219,37 @@ function Home() {
         </div>
       </div>
 
-      <div className="section-left section">
-        <div className="text">
-          <h1>OUR COMMUNITY SPONSORS</h1>
-
-          <div className="sponsors-viewport">
+      <div className="section">
+        <div className="header">
+          <h1>OUR SPONSORS</h1>
+        </div>
+        <div className="sponsors-availability" ref={sponsorAvailabilityRef}>
+          <div className="sponsors-viewport" style={{ width: `${sponsorsViewportWidth}px` }}>
             <div
               className="sponsors-track"
-              style={{ transform: `translateX(-${sponsorStartIndex * (SPONSOR_ITEM_WIDTH + SPONSOR_GAP)}px)` }}
+              onTransitionEnd={handleSponsorTrackTransitionEnd}
+              style={{
+                '--sponsor-item-width': `${SPONSOR_ITEM_WIDTH}px`,
+                '--sponsor-gap': `${SPONSOR_GAP}px`,
+                transform: `translateX(-${(sponsorsLoading ? 0 : sponsorStartIndex) * (SPONSOR_ITEM_WIDTH + SPONSOR_GAP)}px)`,
+                transition: sponsorTrackTransitionEnabled ? undefined : 'none',
+              }}
             >
               {sponsorsLoading
-                ? Array.from({ length: SPONSOR_VISIBLE_COUNT }).map((_, i) => (
+                ? Array.from({ length: sponsorVisibleCount }).map((_, i) => (
                     <div key={i} className="sponsor-placeholder" />
                   ))
-                : sponsors.map((url) => (
-                    <div key={url} className="sponsor-item">
+                : extendedSponsors.map((url, i) => (
+                    <div key={`${url}-${i}`} className="sponsor-item">
                       <img src={url} alt="Sponsor logo" />
                     </div>
                   ))}
             </div>
           </div>
+        </div>
+
+        <div className="text">
+          <h1>SUPPORT US</h1>
         </div>
       </div>
     </div>
