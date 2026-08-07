@@ -28,7 +28,7 @@ function Home() {
             We partner with coaches, mentors, and sponsors to support
             underrepresented communities who lack the resources necessary to partake in the sport.</p>
         </div>
-        <Image src={intro} className="square"/>
+        <Image src={intro} className="square section-img"/>
       </div>
 
 
@@ -66,7 +66,7 @@ function Home() {
             <footer>Aspen Institute Project Play, 2024 Parent Survey</footer>
           </blockquote>
         </div>
-        <Image src={costgraphic} className="padded-img" />
+        <Image src={costgraphic} className="padded-img section-img" />
       </div>
 
       <div className="light-green section">
@@ -125,6 +125,12 @@ function Home() {
                 </Card.Body>
               </Card>
           </Stack>
+        </div>
+      </div>
+
+      <div className="section-left section green">
+        <div className="text">
+          <h1>SUPPORT US</h1>
         </div>
       </div>
     </div>

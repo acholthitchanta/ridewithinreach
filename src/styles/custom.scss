@@ -41,13 +41,10 @@ $white-green: #e4f8df;
 }
 
 .spacer{
-    height: 100px;
+    height: 5vw;
     width: 100vw;
 }
 
-.scrollbar{
-
-}
 
 *::selection {
   color: $white;
@@ -57,8 +54,14 @@ $white-green: #e4f8df;
 .text{
     padding: 5vw;
 }
+
+.section-img{
+    width: 40%;
+    height: auto;
+}
+
 .section{
-    height: 100vh;
+    height: 100%;
 
     h1{
         font-weight: bold;
@@ -69,7 +72,7 @@ $white-green: #e4f8df;
 
 p{
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-size: 1.1rem;
+    font-size: max(1rem, 1.2vw);
 }
 
 .section-right{
@@ -82,11 +85,14 @@ p{
 }
 
 
-@media (max-width: 500px){
+@media (max-width: 800px){
 
     .section{
         flex-direction: column;
         height: 100%;
+    }
+    .section-img{
+        width: 100%;
     }
 
 }
