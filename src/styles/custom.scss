@@ -17,13 +17,10 @@ $white-green: #e4f8df;
 @import "fonts.scss";
 
 *{
-    scrollbar-color: #b0c0a8 $white;
+    scrollbar-color: #b0c0a8 white;
     scrollbar-width: thin;
 }
 
-html{
-    overflow: hidden;
-}
 
 
 .white{
@@ -47,7 +44,7 @@ html{
 
 .spacer{
     height: 5vw;
-    width: 100vw;
+    width: 100%;
 }
 
 
@@ -66,6 +63,7 @@ html{
 }
 
 .section{
+    overflow-x: hidden;
     height: 100%;
 
     h1{
