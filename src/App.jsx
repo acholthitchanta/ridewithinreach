@@ -8,6 +8,7 @@ import Donate from './pages/Donate.jsx'
 import './styles/custom.scss'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
+import Footer from './components/Footer.jsx'
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/donate" element={<Donate />} />
       </Routes>
+      <Footer/>
     </div>
   )
 }

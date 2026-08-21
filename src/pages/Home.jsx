@@ -101,7 +101,7 @@ function Home() {
   }
 
   return (
-    <div>
+    <>
       <Figure className="landing">
         <Figure.Image
           src={landing}
@@ -110,7 +110,7 @@ function Home() {
       </Figure>
       <div className="spacer medium-green"/>
 
-      <div className="white section section-right">
+      <section className="white section-right">
         <div className="intro-text text">
           <h1>RIDE WITHIN REACH</h1>
           <p>Ride Within Reach is a 501(c)(3) organization based in Northwest Arkansas that
@@ -119,10 +119,10 @@ function Home() {
             underrepresented communities who lack the resources necessary to partake in the sport.</p>
         </div>
         <Image src={intro} className="square section-img"/>
-      </div>
+      </section>
 
 
-      <div className="green section section-left">
+      <section className="green section-left">
         <div className="text">
           <h1>WHY THIS MATTERS</h1>
           <p>
@@ -158,9 +158,9 @@ function Home() {
           </blockquote>
         </div>
         <Image src={costgraphic} className="padded-img section-img" />
-      </div>
+      </section>
 
-      <div className="light-green section">
+      <section className="light-green">
         <div className="text">
           <h1 className="text-center">OUR PROGRAMS</h1>
 
@@ -217,43 +217,55 @@ function Home() {
               </Card>
           </Stack>
         </div>
-      </div>
+      </section>
 
-      <div className="section">
+      <section>
         <div className="header">
           <h1>OUR SPONSORS</h1>
         </div>
-        <div className="sponsors-availability" ref={sponsorAvailabilityRef}>
-          <div className="sponsors-viewport" style={{ width: `${sponsorsViewportWidth}px` }}>
-            <div
-              className="sponsors-track"
-              onTransitionEnd={handleSponsorTrackTransitionEnd}
-              style={{
-                '--sponsor-item-width': `${SPONSOR_ITEM_WIDTH}px`,
-                '--sponsor-gap': `${SPONSOR_GAP}px`,
-                transform: `translateX(-${(sponsorsLoading ? 0 : sponsorStartIndex) * (SPONSOR_ITEM_WIDTH + SPONSOR_GAP)}px)`,
-                transition: sponsorTrackTransitionEnabled ? undefined : 'none',
-              }}
-            >
-              {sponsorsLoading
-                ? Array.from({ length: sponsorVisibleCount }).map((_, i) => (
-                    <div key={i} className="sponsor-placeholder" />
-                  ))
-                : extendedSponsors.map((url, i) => (
-                    <div key={`${url}-${i}`} className="sponsor-item">
-                      <img src={url} alt="Sponsor logo" />
-                    </div>
-                  ))}
+          <div className="sponsors-availability" ref={sponsorAvailabilityRef}>
+            <div className="sponsors-viewport" style={{ width: `${sponsorsViewportWidth}px` }}>
+              <div
+                className="sponsors-track"
+                onTransitionEnd={handleSponsorTrackTransitionEnd}
+                style={{
+                  '--sponsor-item-width': `${SPONSOR_ITEM_WIDTH}px`,
+                  '--sponsor-gap': `${SPONSOR_GAP}px`,
+                  transform: `translateX(-${(sponsorsLoading ? 0 : sponsorStartIndex) * (SPONSOR_ITEM_WIDTH + SPONSOR_GAP)}px)`,
+                  transition: sponsorTrackTransitionEnabled ? undefined : 'none',
+                }}
+              >
+                {sponsorsLoading
+                  ? Array.from({ length: sponsorVisibleCount }).map((_, i) => (
+                      <div key={i} className="sponsor-placeholder" />
+                    ))
+                  : extendedSponsors.map((url, i) => (
+                      <div key={`${url}-${i}`} className="sponsor-item">
+                        <img src={url} alt="Sponsor logo" />
+                      </div>
+                    ))}
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="text">
-          <h1>SUPPORT US</h1>
-        </div>
-      </div>
-    </div>
+      <section className="sponsor-a-rider"> 
+
+          <div>
+            <h1>sponsor a rider</h1>
+          </div>
+          
+          <div>
+            <h1>hello</h1>
+          </div>
+
+          <div>
+            <h1>hello2</h1>
+          </div>
+      </section>
+      
+     
+  </>
   )
 }
-
 export default Home
