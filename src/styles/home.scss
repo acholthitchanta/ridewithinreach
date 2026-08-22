@@ -63,6 +63,7 @@
 .program-cards{
     margin-top: 3vw;
     align-items: stretch;
+    justify-content: center;
     width: 100%;
 }
 
@@ -71,6 +72,7 @@
     background-color: white;
     flex: 1;
     border-radius: 1rem;
+    max-width: 600px;
 
     .program-card-media{
         position: relative;
@@ -184,6 +186,13 @@
     border-radius: 1rem;
     padding: 2rem;
 }
+.sponsor-a-rider{
+    display: flex; 
+    flex-direction: row;
+    
+    gap: 2rem;
+
+}
 
 @keyframes sponsor-pulse{
     0%, 100% { opacity: 0.4; }
@@ -196,4 +205,8 @@
         flex-direction: column;
     }
 
+    .sponsors-availability{
+        width: 100vw;
+        margin: 1rem auto 0;
+    }   
 }

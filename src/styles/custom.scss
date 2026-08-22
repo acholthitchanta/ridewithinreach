@@ -64,7 +64,7 @@ $white-green: #e4f8df;
     height: auto;
 }
 
-.section{
+section{
     overflow-x: hidden;
     height: 100%;
 
@@ -93,8 +93,8 @@ p{
 
 @media (max-width: 800px){
 
-    .section{
-        flex-direction: column;
+    section{
+        flex-direction: column !important;
         height: 100%;
     }
     .section-img{
