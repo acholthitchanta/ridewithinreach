@@ -273,7 +273,8 @@ function Home() {
         <div>
     
       </div>
-    
+
+      </>
   )
 }
 
