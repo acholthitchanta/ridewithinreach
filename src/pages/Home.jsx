@@ -249,30 +249,50 @@ function Home() {
           </div>
         </section>
 
-        <section className="donation-options">
-          <div className="info-box">
-            <h1>sponsor a rider</h1>
-            <p>asdf;lkjasdf</p>
-          </div>
-         <div className="info-box">
-            <h1>sponddfdaasdfdr</h1>
-            <p>asdf;lkjasdf</p>
+        <section>
+         <div className="header">
+          <h1 style={{textAlign:"right"}}>
+            Want to contribute?
+          </h1>
          </div>
-         <div className="info-box">
-            <h1>sponsor a rider</h1>
-            <p>asdf;lkjasdf</p>
-         </div>
-          
-                
+        
+         
+           <div className="donation-options">
+            <Card className="donation-box">
+             <Card.Body>
+              <Card.Title>Sponsor a Rider</Card.Title>
+              <Card.Text>give rider money blah b lah blah
+               as;d lkjfa;lsk jdf;lk jasd lkjkdkja  sdflkj
+               dfaSDFasD asdf asdfasdf asdf asdf asdf </Card.Text>
+             </Card.Body>
+            </Card>
+            
+            <Card className="donation-box">
+              <Card.Body>
+                <Card.Title>Become a partner</Card.Title>
+               <Card.Text>asdf asdf asdf asd fasdf asd fasd fasdf asdf asd fasdf sadf  sfda</Card.Text>
+              </Card.Body>
+              </Card>
 
-        
-        
-        
+              <Card className="donation-box">
+               <Card.Body>
+                <Card.Title>Volunteer</Card.Title>
+                <Card.Text>acon teasdas dfasdf asdfasdf asdfasd fasdfa sdf 
+                 asdffa sdfasas dfasdf asdf asd fasd fsad fas dfas dfas df dfas dfas dfant
+                 </Card.Text>
+              </Card.Body>
+              
+            </Card>
+
+          
+           </div> 
+          
+
         </section>
-          <h1>SUPPORT US</h1>
-        <div>
+          
+        
     
-      </div>
+      
 
       </>
   )
