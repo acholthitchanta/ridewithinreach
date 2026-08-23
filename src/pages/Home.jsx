@@ -249,23 +249,33 @@ function Home() {
           </div>
         </section>
 
-      <section className="sponsor-a-rider"> 
-
-          <div>
+        <section className="donation-options">
+          <div className="info-box">
             <h1>sponsor a rider</h1>
+            <p>asdf;lkjasdf</p>
           </div>
+         <div className="info-box">
+            <h1>sponddfdaasdfdr</h1>
+            <p>asdf;lkjasdf</p>
+         </div>
+         <div className="info-box">
+            <h1>sponsor a rider</h1>
+            <p>asdf;lkjasdf</p>
+         </div>
           
-          <div>
-            <h1>hello</h1>
-          </div>
+                
 
-          <div>
-            <h1>hello2</h1>
-          </div>
-      </section>
-      
-     
-  </>
+        
+        
+        
+        </section>
+          <h1>SUPPORT US</h1>
+        <div>
+    
+      </div>
+
+      </>
   )
 }
+
 export default Home
