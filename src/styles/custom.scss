@@ -24,6 +24,10 @@ $white-green: #e4f8df;
 h1,h2{font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
 }
 
+h3{
+    font-weight: bold;
+}
+
 .white{
     background-color: $white;
     color: $primary;
@@ -34,9 +38,17 @@ h1,h2{font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
     color: white;
 }
 
+.medium-dark-green{
+    background-color: rgb(35, 90, 35);
+    color: white;
+}
+
 .medium-green{
     background-color: $secondary;
+    color: white;
 }
+
+
 
 .light-green{
     background-color: $white-green;

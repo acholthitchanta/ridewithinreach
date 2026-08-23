@@ -258,28 +258,36 @@ function Home() {
         
          
            <div className="donation-options">
-            <Card className="donation-box">
+            <Card className="donation-box green">
              <Card.Body>
               <Card.Title>Sponsor a Rider</Card.Title>
-              <Card.Text>give rider money blah b lah blah
-               as;d lkjfa;lsk jdf;lk jasd lkjkdkja  sdflkj
-               dfaSDFasD asdf asdfasdf asdf asdf asdf </Card.Text>
+              <Card.Text>Donate directly to a kid in need. Any donation will help provide necessary
+                equipment like helmets, pads, gloves, or even entire bikes!
+                 </Card.Text>
              </Card.Body>
             </Card>
             
-            <Card className="donation-box">
+            <Card className="donation-box medium-dark-green">
               <Card.Body>
-                <Card.Title>Become a partner</Card.Title>
-               <Card.Text>asdf asdf asdf asd fasdf asd fasd fasdf asdf asd fasdf sadf  sfda</Card.Text>
+                <Card.Title>PARTNER WITH US</Card.Title>
+               <Card.Text>Whether you're
+                a bike shop who can provide bike maintenance or a local business who supports our cause;
+                we rely on you to create a more accessible community for young mountain bikers.
+               </Card.Text>
               </Card.Body>
               </Card>
 
-              <Card className="donation-box">
+              <Card className="donation-box medium-green">
                <Card.Body>
                 <Card.Title>Volunteer</Card.Title>
-                <Card.Text>acon teasdas dfasdf asdfasdf asdfasd fasdfa sdf 
-                 asdffa sdfasas dfasdf asdf asd fasd fsad fas dfas dfas df dfas dfas dfant
+                <Card.Text>Don't have money but still want to support? Volunteers are how we 
+                  run our events, provide coaching, and upkep a safe enviornment for young riders. Whether you can ride, fix bikes, or just want to help, we have a place 
+                  for you as a volunteer!
                  </Card.Text>
+
+                <span className="donation-box-arrow">
+                  {'>'}
+                </span>
               </Card.Body>
               
             </Card>
