@@ -15,7 +15,7 @@ $white-green: #e4f8df;
 @import "nav.scss";
 @import "home.scss";
 @import "fonts.scss";
-
+@import "footer.scss";
 *{
     scrollbar-color: #b0c0a8 white;
     scrollbar-width: thin;
@@ -64,7 +64,7 @@ $white-green: #e4f8df;
     height: auto;
 }
 
-section{
+section, .section{
     overflow-x: hidden;
     height: 100%;
 
@@ -90,9 +90,10 @@ p{
 }
 
 
+
 @media (max-width: 800px){
 
-    section{
+    section, .section{
         flex-direction: column !important;
         height: 100%;
     }
