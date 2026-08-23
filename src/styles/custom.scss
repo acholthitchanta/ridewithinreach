@@ -21,7 +21,8 @@ $white-green: #e4f8df;
     scrollbar-width: thin;
 }
 
-
+h1,h2{font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+}
 
 .white{
     background-color: $white;
@@ -53,7 +54,7 @@ $white-green: #e4f8df;
   background-color: #061f17;
 }
 .header{
-    padding: 5vw 0 0 5vw;
+    padding: 5vw 5vw 0 5vw;
 }
 .text{
     padding: 5vw;

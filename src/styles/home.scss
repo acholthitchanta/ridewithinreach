@@ -170,36 +170,52 @@
 }
 
 .donation-options{
+
     display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    margin-top: 3vw;
-    padding: 0 5vw;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 5vw;
+    align-items: stretch;
+    margin-bottom: 3vw;
+    width:80%;
+   
+    
 }
 
-.info-box{
-    flex: 1;
+.donation-box{
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
+    
+    height: 100%;
+    margin: auto;
+    background-color: $white-green;
     border-radius: 1rem;
-    padding: 2rem;
-}
-.sponsor-a-rider{
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    padding: .5rem;
+    text-align: center;
+    width: 25%;
+     .card-title{
+        font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+        font-size: 3rem;
+        letter-spacing: 0.02em;
+        color: $primary;
+      .card-text{
+        font-size: .5rem;
+    }
+    }
 
+    
 }
+
+
 
 @keyframes sponsor-pulse{
     0%, 100% { opacity: 0.4; }
     50% { opacity: 1; }
 }
 
-@media (max-width: 500px){
+@media (max-width: 700px){
 
     .program-cards{
         flex-direction: column;
@@ -208,5 +224,19 @@
     .sponsors-availability{
         width: 100vw;
         margin: 1rem auto 0;
+
     }   
+
+    .donation-options{
+        flex-direction: column;
+        width: 100%
+       
+        
+
+    }
+    .donation-box{
+        width:95%;
+    }
+
+   
 }
