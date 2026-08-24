@@ -1,0 +1,47 @@
+.team-members{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 2rem 10vw;
+}
+
+.team-card{
+    width: 160px;
+    border: none;
+    background: transparent;
+    text-align: left;
+}
+
+.team-photo{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.team-card-body{
+    padding: 1rem 0 0;
+}
+
+.team-name{
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: $primary;
+    margin-bottom: 0.25rem;
+}
+
+.team-position{
+    color: #6b6b6b;
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 500px){
+    .team-members{
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+

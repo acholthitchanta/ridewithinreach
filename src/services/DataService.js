@@ -15,3 +15,13 @@ export async function getSponsorsBucket(){
         return data.publicUrl
     })
 }
+
+
+export async function getTeam(){
+    const {data, error} = await supabase.from('team').select('*')
+    if (error){
+        console.error(error)
+        return []
+    }
+    return data
+}
