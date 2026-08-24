@@ -1,9 +1,9 @@
 function AboutUs() {
   return (
-    <div>
+    <section className="placeholder-section white">
       <h1>About Us</h1>
-      <p>Learn more about Ride Within Reach.</p>
-    </div>
+      <p>Under construction</p>
+    </section>
   )
 }
 

@@ -4,11 +4,13 @@ footer{
 
 .footer-content{
     position: relative;
+    padding: 5vw;
     z-index: 1;
 
     > img{
-        margin: 5vw 0 0 5vw;
+        margin-bottom: 2rem;
     }
+
 }
 
 .footer-image{
@@ -19,10 +21,21 @@ footer{
     width: 50%;
     height: 100%;
     object-fit: cover;
-    border-radius: 200% 10% 20% 10% / 100% 0 0 100%;
+    border-radius: 200% 10% 20% 10% / 250% 0 0 0%;
 }
 
-@media (max-width: 800px){
+@media (max-width: 500px){
+    
+    .footer-content{
+        >img{
+            margin-top: 2rem;
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 900px){
     footer{
         flex-direction: column;
     }
@@ -32,14 +45,34 @@ footer{
         width: 100%;
         height: auto;
         border-radius: 0;
+        
+    }
+
+    .footer-columns{
+        gap: 10vw !important;
+    }
+
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
+@media (max-width: 500px){
+    .footer-columns{
+        flex-direction: column;
+        gap: 2rem !important;
+    }
+}   
+
 .footer-columns{
     display: flex;
-    gap: 2rem;
+    gap: 5vw;
+    margin: 2rem 0;
     align-items: flex-start;
 }
+
 
 .contact{
     display: flex;
@@ -69,18 +102,17 @@ footer{
 
     a{
         display: flex;
+        gap: 2rem;
         align-items: center;
         justify-content: center;
-        width: 3rem;
-        height: 3rem;
         filter: brightness(0) saturate(100%) invert(16%) sepia(15%) saturate(2398%) hue-rotate(78deg) brightness(90%) contrast(84%);
 
         &:hover{
             filter: brightness(0);
         }
         img{
-            width: 2rem;
-            height: 2rem;
+            width: 3rem;
+            height: 3rem;
         }
     }
 }

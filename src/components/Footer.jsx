@@ -10,35 +10,34 @@ export default function Footer() {
   return (
     <footer className="light-green section">
         <div className="footer-content">
-            <img src={logo} width="300px" />
-
+            <img src={logo} width="500px" />
             <div className="footer-columns">
-                <div className="contact text">
+                <div className="contact">
                     <h3>CONTACT US</h3>
                     <div className="contact-info">
                         <p>Fayetteville, Arkansas</p>
                         <p><a href="tel:+14695070024">+1 (469) 507-0024</a></p>
                         <p><a href="mailto:ridewithinreach@gmail.com">ridewithinreach@gmail.com</a></p>
                     </div>
-                    <div className="social-links">
-                        <a href="https://instagram.com/ridewithinreach" target="_blank" rel="noopener noreferrer">
-                            <img src={instagram} alt="Instagram" />
-                        </a>
-                        <a href="https://www.linkedin.com/company/ride-within-reach" target="_blank" rel="noopener noreferrer">
-                            <img src={linkedin} alt="LinkedIn" />
-                        </a>
-                    </div>
                 </div>
 
-                <div className="contact text">
+                <div className="contact">
                     <h3>EXPLORE</h3>
                     <div className="links">
                         <p><a>Meet the Team</a></p>
-                        <p><a>Our Work</a></p>
+                        <p><a>What We Do</a></p>
                         <p><a>Our Supporters</a></p>
                         <p><a>Sponsor a Rider!</a></p>
                     </div>
                 </div>
+            </div>
+            <div className="social-links">
+                <a href="https://instagram.com/ridewithinreach" target="_blank" rel="noopener noreferrer">
+                    <img src={instagram} alt="Instagram" />
+                </a>
+                <a href="https://www.linkedin.com/company/ride-within-reach" target="_blank" rel="noopener noreferrer">
+                    <img src={linkedin} alt="LinkedIn" />
+                </a>
             </div>
         </div>
 
