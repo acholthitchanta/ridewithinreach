@@ -1,9 +1,9 @@
 function Sponsors() {
   return (
-    <div>
+    <section className="placeholder-section light-green">
       <h1>Sponsors</h1>
-      <p>Meet the sponsors of Ride Within Reach.</p>
-    </div>
+      <p>Under construction</p>
+    </section>
   )
 }
 

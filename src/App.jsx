@@ -9,6 +9,9 @@ import './styles/custom.scss'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 import Footer from './components/Footer.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
+
+
 
 function App() {
 
@@ -26,11 +29,12 @@ function App() {
       cancelAnimationFrame(rafID)
       lenis.destroy();
     }
-    
+
   },[])
 
   return (
     <div>
+      <ScrollToTop />
       <AppNav />
 
       <Routes>

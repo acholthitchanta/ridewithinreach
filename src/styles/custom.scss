@@ -28,6 +28,10 @@ h3{
     font-weight: bold;
 }
 
+body{
+    margin: auto;
+}
+
 .white{
     background-color: $white;
     color: $primary;
@@ -88,9 +92,35 @@ section, .section{
     }
 }
 
+@media (max-width: 800px){
+    section, .section{
+        flex-direction: column !important;
+        height: 100%;
+    }
+
+    .section-medium{
+        padding: 1rem 0;
+    }
+    .section-img{
+        width: 100%;
+    }
+
+}
+
+.section-medium{
+    width: max(80%, 1000px);
+    margin: auto;
+}
+
+@media (max-width: 1000px){
+    .section-medium{
+        width: 95%;
+    }
+}
+
 p{
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-size: max(1rem, 1.2vw);
+    font-size: max(1rem, 1vw);
 }
 
 .section-right{

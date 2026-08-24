@@ -64,7 +64,8 @@
     margin-top: 3vw;
     align-items: stretch;
     justify-content: center;
-    width: 100%;
+    margin: auto;
+    padding: 0 5vw;
 }
 
 .program-card{
@@ -129,7 +130,7 @@
 }
 
 .sponsors-availability{
-    width: 80vw;
+    width: 100%;
     margin: 2rem auto 0;
 }
 
@@ -214,7 +215,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 3rem;
     color: $white;
     right: 1rem;
     bottom: 1rem;
@@ -229,6 +230,28 @@
 
 
 
+.placeholder-section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5vw;
+
+    h1{
+        font-weight: bold;
+        font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+        font-size: max(3rem, 5vw);
+    }
+
+    p{
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: max(1rem, 1.5vw);
+    }
+}
+
 @keyframes sponsor-pulse{
     0%, 100% { opacity: 0.4; }
     50% { opacity: 1; }
@@ -238,6 +261,7 @@
 
     .program-cards{
         flex-direction: column;
+        padding: 0;
     }
 
     .sponsors-availability{
@@ -250,6 +274,8 @@
         flex-direction: column;
         width: 100%;
         height: 100%;
+        align-items: center;
+        gap: 1rem;
         
 
     }

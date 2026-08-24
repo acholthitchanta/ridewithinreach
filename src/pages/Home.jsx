@@ -13,8 +13,8 @@ import { getSponsorsBucket } from "../services/DataService"
 //import { Card, Image, Figure, Stack } from "react-bootstrap"
 import { Link } from 'react-router'
 
-const SPONSOR_ITEM_WIDTH = 160
-const SPONSOR_GAP = 30
+const SPONSOR_ITEM_WIDTH = 150
+const SPONSOR_GAP = 20
 
 function Home() {
 
@@ -42,7 +42,6 @@ function Home() {
             console.log("no sponsors found")
           }
 
-          console.log(sponsorsData)
           setSponsors(sponsorsData)
           setSponsorsLoading(false)
       }
@@ -166,7 +165,7 @@ function Home() {
         <div className="text">
           <h1 className="text-center">OUR PROGRAMS</h1>
 
-          <Stack direction="horizontal" gap={3} className="program-cards">
+          <Stack direction="horizontal" gap={4} className="program-cards">
               <Card className="program-card">
                 <div className="program-card-media">
                   <Card.Img src={gearaccess} />
@@ -221,7 +220,7 @@ function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="section-medium">
         <div className="header">
           <h1>OUR SPONSORS</h1>
         </div>
@@ -251,7 +250,7 @@ function Home() {
           </div>
         </section>
 
-        <section>
+        <section className="section-medium">
          <div className="header">
           <h1 style={{textAlign:"right"}}>
             Want to contribute?
@@ -279,7 +278,7 @@ function Home() {
              </Card.Body>
             </Card>
             
-            <Card as={Link} to="/compnaypartnerpage"  className="donation-box medium-dark-green">
+            <Card as={Link} to="/sponsors"  className="donation-box medium-dark-green">
               <Card.Body>
                 <Card.Title>PARTNER WITH US</Card.Title>
                <Card.Text>Whether you're
@@ -295,7 +294,7 @@ function Home() {
               </Card.Body>
               </Card>
 
-              <Card as={Link} to="/Volunteerform" className="donation-box medium-green">
+              <Card as={Link} to="/donate" className="donation-box medium-green">
                <Card.Body>
                 <Card.Title>Volunteer</Card.Title>
                 <Card.Text>Don't have money but still want to support? Volunteers are how we 

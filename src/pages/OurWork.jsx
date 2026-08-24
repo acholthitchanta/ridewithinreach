@@ -1,9 +1,9 @@
 function OurWork() {
   return (
-    <div>
+    <section className="placeholder-section green">
       <h1>Our Work</h1>
-      <p>See what Ride Within Reach has been doing.</p>
-    </div>
+      <p>Under construction</p>
+    </section>
   )
 }
 
