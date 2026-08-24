@@ -191,6 +191,7 @@
     padding: .5rem;
     text-align: center;
     width: 30%;
+    text-decoration: none;
      .card-title{
         font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
         font-size: max(2rem, 3.5vw);
@@ -198,6 +199,7 @@
     
       .card-text{
         font-size: .5rem;
+        
     }
     }
 
@@ -208,13 +210,19 @@
 
 .donation-box-arrow{
     display: flex;
+    flex-direction: column;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     font-size: 2rem;
     color: $white;
-    justify-content: center;
     right: 1rem;
     bottom: 1rem;
     height: 2rem;
+    transition: transform .2s ease;
+    &:hover, .donation-box:hover & {
+        transform: translateX(0.5rem);
+    }
 
     
 }

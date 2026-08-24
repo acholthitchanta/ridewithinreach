@@ -10,6 +10,8 @@ import handshakeIcon from "../assets/images/logos/handshake.svg"
 import megaphoneIcon from "../assets/images/logos/megaphone.svg"
 import { useEffect, useRef, useState } from "react"
 import { getSponsorsBucket } from "../services/DataService"
+//import { Card, Image, Figure, Stack } from "react-bootstrap"
+import { Link } from 'react-router'
 
 const SPONSOR_ITEM_WIDTH = 160
 const SPONSOR_GAP = 30
@@ -258,26 +260,42 @@ function Home() {
         
          
            <div className="donation-options">
-            <Card className="donation-box green">
+          
+            
+
+            <Card as={Link} to="/donate" className="donation-box green">
              <Card.Body>
               <Card.Title>Sponsor a Rider</Card.Title>
               <Card.Text>Donate directly to a kid in need. Any donation will help provide necessary
                 equipment like helmets, pads, gloves, or even entire bikes!
-                 </Card.Text>
+              </Card.Text>
+                <span className="donation-box-arrow">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="13 17 18 12 13 7"></polyline>
+                    <polyline points="6 17 11 12 6 7"></polyline>
+                 </svg>
+                </span>
+
              </Card.Body>
             </Card>
             
-            <Card className="donation-box medium-dark-green">
+            <Card as={Link} to="/compnaypartnerpage"  className="donation-box medium-dark-green">
               <Card.Body>
                 <Card.Title>PARTNER WITH US</Card.Title>
                <Card.Text>Whether you're
                 a bike shop who can provide bike maintenance or a local business who supports our cause;
                 we rely on you to create a more accessible community for young mountain bikers.
                </Card.Text>
+              <span className="donation-box-arrow">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="13 17 18 12 13 7"></polyline>
+                    <polyline points="6 17 11 12 6 7"></polyline>
+                 </svg>
+                </span>
               </Card.Body>
               </Card>
 
-              <Card className="donation-box medium-green">
+              <Card as={Link} to="/Volunteerform" className="donation-box medium-green">
                <Card.Body>
                 <Card.Title>Volunteer</Card.Title>
                 <Card.Text>Don't have money but still want to support? Volunteers are how we 
@@ -286,7 +304,10 @@ function Home() {
                  </Card.Text>
 
                 <span className="donation-box-arrow">
-                  {'>'}
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="13 17 18 12 13 7"></polyline>
+                    <polyline points="6 17 11 12 6 7"></polyline>
+                 </svg>
                 </span>
               </Card.Body>
               
