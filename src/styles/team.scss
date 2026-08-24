@@ -4,11 +4,13 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2.5rem;
-    padding: 2rem 10vw;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
 .team-card{
-    width: 160px;
+    width: 170px;
     border: none;
     background: transparent;
     text-align: left;
@@ -18,24 +20,52 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 0.75rem;
+    border-radius: 0;
+}
+
+.team-divider{
+    border: none;
+    border-top: 2px solid $primary;
+    margin: 1rem 0 0;
 }
 
 .team-card-body{
-    padding: 1rem 0 0;
+    padding: 0.75rem 0 0;
 }
 
 .team-name{
     font-weight: bold;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: $primary;
     margin-bottom: 0.25rem;
 }
 
 .team-position{
-    color: #6b6b6b;
-    font-size: 0.75rem;
-    margin-bottom: 0.75rem;
+    color: $secondary;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.team-photo-placeholder{
+    background-color: rgba(130, 139, 85, 0.15);
+    animation: sponsor-pulse 1.4s ease-in-out infinite;
+}
+
+.team-line{
+    height: 0.8rem;
+    border-radius: 0.25rem;
+    background-color: rgba(130, 139, 85, 0.15);
+    animation: sponsor-pulse 1.4s ease-in-out infinite;
+}
+
+.team-line-name{
+    width: 70%;
+    margin-bottom: 0.5rem;
+}
+
+.team-line-position{
+    width: 50%;
 }
 
 @media (max-width: 500px){
