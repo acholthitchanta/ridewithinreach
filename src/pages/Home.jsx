@@ -297,7 +297,7 @@ function Home() {
               <Card as={Link} to="/donate" className="donation-box medium-green">
                <Card.Body>
                 <Card.Title>Volunteer</Card.Title>
-                <Card.Text>Don't have money but still want to support? Volunteers are how we 
+                <Card.Text> Volunteers are how we 
                   run our events, provide coaching, and upkep a safe enviornment for young riders. Whether you can ride, fix bikes, or just want to help, we have a place 
                   for you as a volunteer!
                  </Card.Text>

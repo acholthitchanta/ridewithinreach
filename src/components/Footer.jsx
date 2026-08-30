@@ -17,7 +17,7 @@ export default function Footer() {
                     <div className="contact-info">
                         <p>Fayetteville, Arkansas</p>
                         <p><a href="tel:+14695070024">+1 (469) 507-0024</a></p>
-                        <p><a href="mailto:ridewithinreach@gmail.com">ridewithinreach@gmail.com</a></p>
+                        <p><a href="mailto:contact@ridewithinreach.org">contact@ridewithinreach.org</a></p>
                     </div>
                 </div>
 

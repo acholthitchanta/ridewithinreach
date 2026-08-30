@@ -1,0 +1,54 @@
+.donate-text {
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    max-width: 750px ;
+}
+
+.donation-slider input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 999px;
+    outline: none;
+
+    &::-webkit-slider-runnable-track {
+        background: transparent; // let the inline gradient show through
+    }
+    &::-moz-range-track {
+        background: transparent;
+    }
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: white;
+        border: 2px solid #828b55;
+        cursor: pointer;
+    }
+    &::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: white;
+        border: 2px solid #828b55;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px){
+    .donate-text{
+        max-width: 100%;
+
+    }
+
+
+}
