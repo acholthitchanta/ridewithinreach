@@ -3,11 +3,15 @@ import {Card, Figure} from 'react-bootstrap'
 import {useEffect, useRef, useState} from "react"
 
 const DONATION_TIERS = [
-{ amount: "$1", text:" placeholder text"},
-{ amount: "$10", text:" placeholder text"},
-{ amount: "$100", text:" placeholder text"},
-{ amount: "$1,000", text:" placeholder text"},
-{ amount: "$2,000", text:" placeholder text"},
+{ amount: "", text: ""},
+{ amount: "$50", text: "Helps cover maintenace and repairs for one rider's bike for a season."},
+{ amount: "$100", text: "Covers a helmet or a pair of shoes and gloves for one rider."},
+{ amount: "$500", text: "Covers a full set of protective gear, plus a helmet, for one rider."},
+{ amount: "$1,000", text: "Funds an entry-level mountain bike and safety gear for one rider."},
+{ amount: "$2,000", text: "Fully equips one rider for the season, bike, gear, and a year of maintenance."},
+{ amount: "$5,000", text: "Fully equips and supports 10 riders for the season as our Trailhead Sponsor."},
+{ amount: "$10,000", text: "Fully equips and supports 20 riders for the season as our Presenting Sponsor."},
+
 ]
 
 
@@ -32,7 +36,8 @@ function Donate() {
         : 0
 
       setPercent(progress * 100)
-      setTierIndex(Math.round(Math.pow(progress, 0.5) * (DONATION_TIERS.length - 1)))
+      const tierStep = Math.min(DONATION_TIERS.length - 1, Math.floor(progress * DONATION_TIERS.length))
+      setTierIndex(tierStep)
     }
 
     function handleScroll() {
@@ -48,32 +53,31 @@ function Donate() {
   }, [])
 
   return (
-<>
+<div className="light-green">
   <Figure className="landing">   
     <Figure.Image src={landing} />
        <Figure.Caption>DONATE</Figure.Caption>
   </Figure>
 
-  <section className="light-green section">
+  <section className="light-green section-medium">
     <div className="header">
       <h1 style={{textAlign:"center"}}>
         What can my contribution do? 
       </h1>
-      <p className="donate-text">
+      <p >
         Any amount you can contribute is greatly appreciated! 
 
 
       </p>
-      <p className="donate-text">  
+      <p>  
         Your donation will go directly to paying for the necessary equipment and all fees asscoated with coaching and racing for young mountain bikers
       </p>
-      <p className="donate-text">
+      <p>
         Thank you for your support!
-      </p>s
+      </p>
     </div>
   </section>
 
-  <section className='light-green' style={{height: '50vh'}}/>
 
   <section className='light-green section'>
   <div
@@ -83,17 +87,6 @@ function Donate() {
   >
     <div className="donation-scroll-sticky">
       <div className="donation-slider">
-        <div className="tier-list">
-          {DONATION_TIERS.map((tier, index) => (
-            <div
-              key={tier.amount}
-              className={`tier-info ${index === tierIndex ? "active" : ""}`}
-            >
-              <h3>{tier.amount}</h3>
-              <p>{tier.text}</p>
-            </div>
-          ))}
-        </div>
         <div className="slider-row">
           <div className="slider-wrap">
             <input
@@ -116,12 +109,14 @@ function Donate() {
           </div>
           <div className="slider-tabs">
             {DONATION_TIERS.map((tier, index) => (
-              <span
+              <div
                 key={tier.amount}
                 className={index === tierIndex ? "active" : ""}
+                style={{ top: `${(index / (DONATION_TIERS.length - 1)) * 100}%` }}
               >
-                {tier.amount}
-              </span>
+                <h3>{tier.amount}</h3>
+                <p>{tier.text}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -130,7 +125,7 @@ function Donate() {
   </div>
     
   </section>
-</>
+</div>
   )
 }
 

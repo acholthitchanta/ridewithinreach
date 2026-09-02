@@ -12,7 +12,7 @@
 .donation-scroll-sticky {
     position: sticky;
     top: 0;
-    height: 100vh;
+    height: 200vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    width: calc(10vw + 2rem);
     height: 200vh;
 }
 
@@ -70,21 +70,36 @@
 }
 
 .slider-tabs {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
     height: 200vh;
+    width: 30vw;
 
-    span {
+    div {
+        position: absolute;
+        left: 0;
+        width: 100%;
         font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
         font-size: 1.5rem;
         color: #828b55;
         opacity: 0.5;
         transition: opacity 0.3s ease;
 
+        h3 {
+            margin: 0;
+        }
+        p{
+            font-size: calc(0.2vw + 0.8rem);
+            color: #828b55;
+        }
         &.active {
             opacity: 1;
         }
+    }
+}
+
+@media (max-width: 700px) {
+    .slider-tabs {
+        width: 50vw;
     }
 }
 
@@ -94,7 +109,7 @@
     pointer-events: none;
     flex-shrink: 0;
     width: 200vh;
-    height: 200px;
+    height: calc(10vw + 2rem);
     transform: rotate(90deg);
     border-radius: 0px;
     outline: none;
@@ -110,7 +125,7 @@
     &::-webkit-slider-thumb {
         -webkit-appearance: none;
         width: 0px;
-        height: 200px;
+        height: calc(10vw + 2rem);
         border-radius: 0px;
         background: #828b55;
         cursor: pointer;
