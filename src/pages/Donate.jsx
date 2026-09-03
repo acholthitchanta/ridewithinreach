@@ -1,14 +1,14 @@
 import landing from '../assets/images/donate.jpg'
 import {Card, Figure} from 'react-bootstrap'
 import {useEffect, useRef, useState} from "react"
-import $50graphic from '../assets/images/$50graphic.png'
+import derailleur from '../assets/images/derailleur.png'
 
 
 const DONATION_TIERS = [
 { amount: "", text: ""},
-{ amount: "$50", text: "Helps cover maintenace and repairs for one rider's bike for a season.", image: '$50graphic'},
-{ amount: "$100", text: "Covers a helmet or a pair of shoes and gloves for one rider."},
-{ amount: "$500", text: "Covers a full set of protective gear, plus a helmet, for one rider."},
+{ amount: "$50", text: "Helps cover maintenace and repairs for one rider's bike for a season.", image: derailleur},
+{ amount: "$100", text: "Covers a helmet or a pair of shoes and gloves for one rider.", image: derailleur},
+{ amount: "$500", text: "Covers a full set of protective gear, plus a helmet, for one rider.", image: derailleur},
 { amount: "$1,000", text: "Funds an entry-level mountain bike and safety gear for one rider."},
 { amount: "$2,000", text: "Fully equips one rider for the season, bike, gear, and a year of maintenance."},
 { amount: "$5,000", text: "Fully equips and supports 10 riders for the season as our Trailhead Sponsor."},
@@ -21,6 +21,12 @@ function Donate() {
   const [tierIndex, setTierIndex] = useState(0)
   const [percent, setPercent] = useState(0)
   const scrollSectionRef = useRef(null)
+  const currentTier = DONATION_TIERS[tierIndex]
+
+  const [lastImage, setLastImage] = useState(null)
+  useEffect(() => {
+    if (currentTier.image) setLastImage(currentTier.image)
+  }, [currentTier.image])
 
   useEffect(() => {
     let frameId = null
@@ -111,19 +117,29 @@ function Donate() {
           </div>
           <div className="slider-tabs">
             {DONATION_TIERS.map((tier, index) => (
-              <div
-                key={tier.amount}
-                className={index === tierIndex ? "active" : ""}
-                style={{ top: `${(index / (DONATION_TIERS.length - 1)) * 100}%` }}
-              >
-                <h3>{tier.amount}</h3>
-                <p>{tier.text}</p>
-              </div>
+              tier.text && (
+                <div
+                  key={tier.amount}
+                  className={index === tierIndex ? "active" : ""}
+                  style={{ top: `${(index / (DONATION_TIERS.length - 1)) * 100}%` }}
+                >
+                  <h3>{tier.amount}</h3>
+                  <p>{tier.text}</p>
+                
+                </div>
+              )
             ))}
           </div>
         </div>
       </div>
-    </div>
+      <div 
+      className="tier-image"
+      style={{ top: `${(tierIndex / (DONATION_TIERS.length - 1)) * 100}%` , opacity: currentTier.image ? 1 : 0,}}
+      >
+      {lastImage && <img src={lastImage} alt={currentTier.amount}/>}
+      </div>
+      </div>
+      
   </div>
     
   </section>

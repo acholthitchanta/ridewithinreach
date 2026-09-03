@@ -14,15 +14,16 @@
     top: 0;
     height: 200vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    //align-items: center;
+    justify-content: flex-start;
+    padding-left: 5vw;
 }
 
 .donation-slider {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .tier-list {
@@ -39,6 +40,8 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    position: relative;
+    height: 200vh;
 }
 
 .slider-wrap {
@@ -46,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(10vw + 2rem);
+    width: calc(15vw + 4rem);
     height: 200vh;
 }
 
@@ -78,22 +81,52 @@
         position: absolute;
         left: 0;
         width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
         font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
         font-size: 1.5rem;
-        color: #828b55;
+        color: #0d0c0e;
         opacity: 0.5;
         transition: opacity 0.3s ease;
 
         h3 {
             margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            color:#849144;
+            white-space: nowrap;
         }
         p{
-            font-size: calc(0.2vw + 0.8rem);
-            color: #828b55;
+            background: white;
+            font-size: calc(.4vw + .8rem);
+            color: #333;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            
         }
         &.active {
             opacity: 1;
         }
+    }
+}
+
+.tier-image {
+    position: absolute;
+    right: 0;
+    width: 20vw;
+    height: 20vw;
+    transform: translateY(-50%); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.3s ease, opacity 0.3s ease; 
+
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
     }
 }
 
@@ -109,7 +142,7 @@
     pointer-events: none;
     flex-shrink: 0;
     width: 200vh;
-    height: calc(10vw + 2rem);
+    height: calc(15vw + 4rem);
     transform: rotate(90deg);
     border-radius: 0px;
     outline: none;
@@ -125,7 +158,7 @@
     &::-webkit-slider-thumb {
         -webkit-appearance: none;
         width: 0px;
-        height: calc(10vw + 2rem);
+        height: calc(15vw + 4rem);
         border-radius: 0px;
         background: #828b55;
         cursor: pointer;
@@ -133,7 +166,7 @@
 
     &::-moz-range-thumb {
         width: 0px;
-        height: 200px;
+        height: calc(15vw + 4rem);
         border-radius: 0px;
         background: #828b55;
         cursor: pointer;
