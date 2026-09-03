@@ -12,7 +12,7 @@
 .donation-scroll-sticky {
     position: sticky;
     top: 0;
-    height: 200vh;
+    height: 250vh;
     display: flex;
     //align-items: center;
     justify-content: flex-start;
@@ -41,7 +41,7 @@
     align-items: center;
     gap: 1.5rem;
     position: relative;
-    height: 200vh;
+    height: 250vh;
 }
 
 .slider-wrap {
@@ -50,7 +50,7 @@
     align-items: center;
     justify-content: center;
     width: calc(15vw + 4rem);
-    height: 200vh;
+    height: 250vh;
 }
 
 .slider-ticks {
@@ -74,14 +74,12 @@
 
 .slider-tabs {
     position: relative;
-    height: 200vh;
+    height: 250vh;
     width: 30vw;
 
     div {
         position: absolute;
         left: 0;
-        width: 100%;
-        display: flex;
         align-items: center;
         gap: 1.5rem;
         font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
@@ -92,16 +90,17 @@
 
         h3 {
             margin: 0;
-            font-size: 3rem;
+            font-size: calc(1.5vw + 2rem);
             font-weight: 700;
-            color:#849144;
+            color:$primary;
             white-space: nowrap;
         }
         p{
-            background: white;
-            font-size: calc(.4vw + .8rem);
+            background: rgba(255, 255, 255, 0.6);
+            font-size: calc(.4vw + .6rem);
             color: #333;
-            padding: 1rem 1.5rem;
+            width: max(150px, 50%);
+            padding: 0.5rem;
             border-radius: 0.5rem;
             
         }
@@ -113,14 +112,15 @@
 
 .tier-image {
     position: absolute;
-    right: 0;
-    width: 20vw;
-    height: 20vw;
+    right: 5%;
+    width: max(100px, 20vw);
+    height: max(100px, 20vw);
     transform: translateY(-50%); 
     display: flex;
     align-items: center;
     justify-content: center;
     transition: top 0.3s ease, opacity 0.3s ease; 
+    z-index: -1;
 
 
     img {
@@ -141,14 +141,14 @@
     appearance: none;
     pointer-events: none;
     flex-shrink: 0;
-    width: 200vh;
+    width: 250vh;
     height: calc(15vw + 4rem);
     transform: rotate(90deg);
     border-radius: 0px;
     outline: none;
 
     &::-webkit-slider-runnable-track {
-        background: transparent; // let the inline gradient show through
+        background: transparent; 
     }
 
     &::-moz-range-track {

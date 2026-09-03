@@ -38,7 +38,7 @@ function Donate() {
 
       const rect = section.getBoundingClientRect()
       const scrollableHeight = rect.height - window.innerHeight
-      const startOffset = window.innerHeight * 0.5
+      const startOffset = window.innerHeight * 0.3
       const progress = scrollableHeight > 0
         ? Math.min(1, Math.max(0, (startOffset - rect.top) / scrollableHeight))
         : 0
@@ -67,31 +67,33 @@ function Donate() {
        <Figure.Caption>DONATE</Figure.Caption>
   </Figure>
 
-  <section className="light-green section-medium">
-    <div className="header">
-      <h1 style={{textAlign:"center"}}>
-        What can my contribution do? 
-      </h1>
-      <p >
-        Any amount you can contribute is greatly appreciated! 
+    <div className="spacer"/>
 
 
-      </p>
-      <p>  
-        Your donation will go directly to paying for the necessary equipment and all fees asscoated with coaching and racing for young mountain bikers
-      </p>
-      <p>
-        Thank you for your support!
-      </p>
+  <section className='light-green section-left mt-2'>
+
+    <div>
+      <div className="header">
+        <h1 style={{textAlign:"center"}}>
+          HOW CAN I CONTRIBUTE?
+        </h1>
+        <p >
+          Any amount you can contribute is greatly appreciated! 
+
+
+        </p>
+        <p>  
+          Your donation will go directly to paying for the necessary equipment and all fees asscoated with coaching and racing for young mountain bikers
+        </p>
+        <p>
+          Thank you for your support!
+        </p>
+      </div>
     </div>
-  </section>
-
-
-  <section className='light-green section'>
   <div
     className="donation-scroll-section"
     ref={scrollSectionRef}
-    style={{ height: `${DONATION_TIERS.length * 40}vh` }}
+    style={{ height: `${(DONATION_TIERS.length-1) * 40}vh` }}
   >
     <div className="donation-scroll-sticky">
       <div className="donation-slider">
