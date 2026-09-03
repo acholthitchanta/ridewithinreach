@@ -1,4 +1,4 @@
-import landing from '../assets/images/donate.jpg'
+import landing from '../assets/images/Donate.jpg'
 import {Card, Figure} from 'react-bootstrap'
 import {useEffect, useRef, useState} from "react"
 //import derailleur from '../assets/images/derailleur.png'
