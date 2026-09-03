@@ -38,13 +38,13 @@ function Donate() {
 
       const rect = section.getBoundingClientRect()
       const scrollableHeight = rect.height - window.innerHeight
-      const startOffset = window.innerHeight * 0.3
+      const startOffset = window.innerHeight * 0.25
       const progress = scrollableHeight > 0
         ? Math.min(1, Math.max(0, (startOffset - rect.top) / scrollableHeight))
         : 0
 
       setPercent(progress * 100)
-      const tierStep = Math.min(DONATION_TIERS.length - 1, Math.floor(progress * DONATION_TIERS.length))
+      const tierStep = Math.min(DONATION_TIERS.length - 1, Math.floor(progress * (DONATION_TIERS.length - 1)))
       setTierIndex(tierStep)
     }
 
