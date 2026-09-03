@@ -1,7 +1,7 @@
 import landing from '../assets/images/donate.jpg'
 import {Card, Figure} from 'react-bootstrap'
 import {useEffect, useRef, useState} from "react"
-import derailleur from '../assets/images/derailleur.png'
+//import derailleur from '../assets/images/derailleur.png'
 
 
 const DONATION_TIERS = [
