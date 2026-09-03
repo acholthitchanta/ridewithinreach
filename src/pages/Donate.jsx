@@ -6,9 +6,9 @@ import derailleur from '../assets/images/derailleur.png'
 
 const DONATION_TIERS = [
 { amount: "", text: ""},
-{ amount: "$50", text: "Helps cover maintenace and repairs for one rider's bike for a season.", image: derailleur},
-{ amount: "$100", text: "Covers a helmet or a pair of shoes and gloves for one rider.", image: derailleur},
-{ amount: "$500", text: "Covers a full set of protective gear, plus a helmet, for one rider.", image: derailleur},
+{ amount: "$50", text: "Helps cover maintenace and repairs for one rider's bike for a season.", },
+{ amount: "$100", text: "Covers a helmet or a pair of shoes and gloves for one rider.", },
+{ amount: "$500", text: "Covers a full set of protective gear, plus a helmet, for one rider.",},
 { amount: "$1,000", text: "Funds an entry-level mountain bike and safety gear for one rider."},
 { amount: "$2,000", text: "Fully equips one rider for the season, bike, gear, and a year of maintenance."},
 { amount: "$5,000", text: "Fully equips and supports 10 riders for the season as our Trailhead Sponsor."},
