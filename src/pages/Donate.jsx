@@ -64,32 +64,16 @@ function Donate() {
 <div className="light-green">
   <Figure className="landing">   
     <Figure.Image src={landing} />
-       <Figure.Caption>DONATE</Figure.Caption>
+       <Figure.Caption>
+        <h1>DONATE</h1>
+        <p>Any amount you can contribute is greatly appreciated! Your donation will go directly to paying for the necessary equipment and all fees associated with coaching and racing for young mountain bikers.</p>
+        </Figure.Caption>
   </Figure>
 
     <div className="spacer"/>
 
 
-  <section className='light-green section-left mt-2'>
-
-    <div>
-      <div className="header">
-        <h1 style={{textAlign:"center"}}>
-          HOW CAN I CONTRIBUTE?
-        </h1>
-        <p >
-          Any amount you can contribute is greatly appreciated! 
-
-
-        </p>
-        <p>  
-          Your donation will go directly to paying for the necessary equipment and all fees asscoated with coaching and racing for young mountain bikers
-        </p>
-        <p>
-          Thank you for your support!
-        </p>
-      </div>
-    </div>
+  <section className='light-green mt-2'>
   <div
     className="donation-scroll-section"
     ref={scrollSectionRef}

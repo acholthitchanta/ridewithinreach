@@ -1,12 +1,27 @@
 .figure-caption{
-    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
-    font-size: max(5rem, 10vw);
-    width: 70%;
-    color: white;
+    padding-left: 4vw;
     position: absolute;
     bottom: 1rem;
-    padding-left: 4vw;
-    line-height: max(5rem, 10vw);
+    h1{
+        font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+        font-size: max(5rem, 10vw);
+        width: 70%;
+        color: white;
+        line-height: max(5rem, 10vw);
+    }
+    p{
+        color: white;
+        font-size: max(1rem, 1.5vw);
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px){
+    .figure-caption{
+        p{
+            width: 95%;
+        }
+    }
 }
 
 .figure{

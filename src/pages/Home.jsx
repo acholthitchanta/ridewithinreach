@@ -107,7 +107,7 @@ function Home() {
         <Figure.Image
           src={landing}
         />
-        <Figure.Caption>Keeping the trail within reach.</Figure.Caption>
+        <Figure.Caption><h1>Keeping the trail within reach.</h1></Figure.Caption>
       </Figure>
       <div className="spacer medium-green"/>
 

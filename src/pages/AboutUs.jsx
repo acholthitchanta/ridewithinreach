@@ -21,7 +21,10 @@ function AboutUs() {
         <Figure.Image
           src={landing}
         />
-        <Figure.Caption>LEADERSHIP</Figure.Caption>
+        <Figure.Caption>
+          <h1>LEADERSHIP</h1>
+          <p>Ride Within Reach is lead by college students around the nation.</p>
+        </Figure.Caption>
       </Figure>
     <section className="white" style={{paddingTop: '2rem', paddingBottom: '2rem'}}>
       {teamLoading && (
