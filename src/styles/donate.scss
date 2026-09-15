@@ -14,7 +14,7 @@
     top: 0;
     height: 250vh;
     display: flex;
-    //align-items: center;
+    align-items: center;
     justify-content: flex-start;
     padding-left: 5vw;
 }
@@ -97,9 +97,9 @@
         }
         p{
             background: rgba(255, 255, 255, 0.6);
-            font-size: calc(.4vw + .6rem);
+            font-size: calc(.8vw + .9rem);
             color: #333;
-            width: max(150px, 50%);
+            width: max(200px, 65%);
             padding: 0.5rem;
             border-radius: 0.5rem;
             
@@ -112,10 +112,10 @@
 
 .tier-image {
     position: absolute;
-    right: 5%;
-    width: max(100px, 20vw);
-    height: max(100px, 20vw);
-    transform: translateY(-50%); 
+    right: 15%;
+    width: max(120px, 25vw);
+    height: max(120px, 25vw);
+    transform: translateY(calc(-50% + 15rem));
     display: flex;
     align-items: center;
     justify-content: center;

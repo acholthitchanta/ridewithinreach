@@ -1,8 +1,7 @@
 import React from 'react'
-
+import {Link} from 'react-router'
 import instagram from '../assets/logos/instagram.svg'
 import linkedin from '../assets/logos/linkedin.svg'
-import logo from '/public/logolong.png'
 import image from '../assets/images/footer.jpg'
 
 
@@ -10,7 +9,8 @@ export default function Footer() {
   return (
     <footer className="light-green section">
         <div className="footer-content">
-            <img src={logo} width="500px" />
+            <img src="/logolong.png" width="500px" alt="Ride Within Reach" />
+
             <div className="footer-columns">
                 <div className="contact">
                     <h3>CONTACT US</h3>
@@ -24,10 +24,10 @@ export default function Footer() {
                 <div className="contact">
                     <h3>EXPLORE</h3>
                     <div className="links">
-                        <p><a>Meet the Team</a></p>
-                        <p><a>What We Do</a></p>
-                        <p><a>Our Supporters</a></p>
-                        <p><a>Sponsor a Rider!</a></p>
+                        <p><Link to="/leadership">Meet the Team</Link></p>
+                        <p><Link to="/our-work">What We Do</Link></p>
+                        <p><Link to="/sponsors">Our Supporters</Link></p>
+                        <p><Link to="/donate">Sponsor a Rider!</Link></p>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,76 @@
+$chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 17 14 12 9 7'/%3E%3C/svg%3E");
+.listformat{
+    list-style: none;
+    padding-left: 2rem;
+
+
+    li{
+        position: relative;
+        &::before{
+        content: "";
+        position: absolute;
+        left: -2rem;
+        
+        width: 1.5em;
+        height: 1.5em;
+        mask-image: $chevron;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: currentColor;
+        }
+    }
+
+}
+
+.partner-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 40%;
+    padding: 5vw;
+
+
+    a{
+        display: block;
+        width: 24rem;
+        transition: transform 0.2s ease;
+        &:hover{
+            transform: translateY(-4px);
+        }
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        
+
+    }
+
+}
+.research-logo{
+    width: 20%;
+    height: auto;
+    align-self: center;
+    object-fit: contain;
+    padding: 3vw 3vw 3vw 0;  
+}
+
+
+
+
+@media (max-width: 700px){
+
+    .research-logo{
+        width: 50%;
+        align-self: center;
+        padding: 0 3vw 3vw;
+
+    }
+
+    .partner-cards{
+        width: 100%;
+    }
+}
