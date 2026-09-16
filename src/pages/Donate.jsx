@@ -13,8 +13,8 @@ const DONATION_TIERS = [
 { amount: "$500", text: "Pays for an entire season of bike racing and helps to cover the costs of travel and lodging.", image: racefeegraphic, imageScale: 1.25},
 { amount: "$1,000", text: "Funds an entry-level mountain bike for one rider along with basic maintenance tools.", image: entrybikegraphic, imageScale: 1.75},
 //{ amount: "$2,000", text: "Fully equips one rider for the season, bike, gear, and a year of maintenance."},
-{ amount: "$5,000", text: "Fully equips and supports 10 riders for the season as our Trailhead Sponsor.", image: bikemaingraphic},
-{ amount: "$10,000", text: "Fully equips and supports 20 riders for the season as our Presenting Sponsor.", image: bikemaingraphic},
+{ amount: "$5,000", text: "Fully equips and supports 10 riders for the season as our Trailhead Sponsor.", },
+{ amount: "$10,000", text: "Fully equips and supports 20 riders for the season as our Presenting Sponsor.", },
 
 ]
 
