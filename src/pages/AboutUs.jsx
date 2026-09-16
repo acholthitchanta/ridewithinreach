@@ -23,7 +23,7 @@ function AboutUs() {
         />
         <Figure.Caption>
           <h1>LEADERSHIP</h1>
-          <p>Ride Within Reach is lead by college students around the nation.</p>
+          <p>Ride Within Reach is lead by college students around the</p>
         </Figure.Caption>
       </Figure>
     <section className="white" style={{paddingTop: '2rem', paddingBottom: '2rem'}}>
