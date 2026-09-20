@@ -9,7 +9,7 @@ import entrybikegraphic from '../assets/images/entrybikegraphic.png'
 const DONATION_TIERS = [
 { amount: "", text: ""},
 { amount: "$50", text: "Covers the costs of maintenance that keeps bikes on trails and provides basic tools for kids to upkeep their bikes themselves.", image: bikemaingraphic },
-{ amount: "$100", text: "Provides necessary saftey equipment and quality of life accessories to keep kids safe and make the ride more fun.", image: safteyequip},
+{ amount: "$100", text: "Provides necessary safety equipment and quality of life accessories to keep kids safe and make the ride more fun.", image: safteyequip},
 { amount: "$500", text: "Pays for an entire season of bike racing and helps to cover the costs of travel and lodging.", image: racefeegraphic, imageScale: 1.25},
 { amount: "$1,000", text: "Funds an entry-level mountain bike for one rider along with basic maintenance tools.", image: entrybikegraphic, imageScale: 1.75},
 //{ amount: "$2,000", text: "Fully equips one rider for the season, bike, gear, and a year of maintenance."},
