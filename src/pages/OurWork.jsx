@@ -24,7 +24,7 @@ function OurWork() {
           <Figure.Image src={landing} />
             <Figure.Caption>
             <h1>OUR WORK</h1>
-            <p>Rdie Within Reach is dedicated to constantly evolving and finding new ways to advocate for the mountain biking community</p>
+            <p>Rdie Within Reach is dedicated to constantly evolving and finding new ways to advocate for the mountain biking community.</p>
             </Figure.Caption>
          </Figure>   
       </div>
@@ -34,10 +34,17 @@ function OurWork() {
       <div className="intro-text text">
         <h1>Community Impact</h1>
         <ul className="listformat">
-          <li>RWR hosted a group ride in partnership with FAYMTB, events similar to this along with clinics are a large part of our mission of providing kids with a connection to the MTB community in Northwest Arkansas.</li>
+          <li>RWR hosts a variety of events to empower young riders, which include
+            community bike rides with mentors, equipment giveaways, technique/skills workshops,
+            and more.
+            Events like these represent a large part of our mission of 
+            providing kids with a connection to the MTB community in Northwest Arkansas.</li>
         </ul>
         <ul className="listformat">
-          <li>Our outreach representives attend networking and community events regulary to share our misson and network with companies that could become a resource for our riders.</li>
+          <li>Our outreach representives attend networking 
+            and community events regulary to share our misson
+            and form partnerships with companies that could 
+            help provide the necessary resources for our riders.</li>
         </ul> 
       </div>
     </section>
@@ -45,7 +52,9 @@ function OurWork() {
       <div className="intro-text text">
         <h1>Partner Network</h1>
         <ul className="listformat">
-          <li>RWR has partnered up with the Tri-region E-bike program to help push their objective of providing E-bikes to people in need.</li>
+          <li>RWR has partnered up with the 
+            Tri-region E-bike program to help push their objective
+             of providing E-bikes to people in need.</li>
         </ul>
       </div>  
     <div className="partner-cards">
@@ -60,7 +69,12 @@ function OurWork() {
       <div className="intro-text text">
         <h1>Research</h1>
         <ul className="listformat">
-          <li>RWR is conducting research with Dr. Cian L. Brown, Assistant Professor of Counselor Education and Supervision at the University of Arkansas, in partnership with the Tri-Region E-Bike Voucher Program. The research evaluates the community-level benefits of E-bike voucher programs, including transportation access, affordability, health, and mobility.</li>
+          <li>RWR is conducting research with Dr. Cian L. Brown, A
+            ssistant Professor of Counselor Education and Supervision at the 
+            University of Arkansas in partnership with the Tri-Region E-Bike Voucher 
+            Program. The research evaluates the community-level 
+            benefits of E-bike voucher programs, including transportation access, 
+            affordability, health, and mobility.</li>
         </ul>
       
       </div>
