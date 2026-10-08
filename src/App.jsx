@@ -10,7 +10,7 @@ import { useEffect } from 'react'
 import Lenis from 'lenis'
 import Footer from './components/Footer.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
-
+import Ebikeform from './pages/EbikeForm.jsx'
 
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
         <Route path="/our-work" element={<OurWork />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/ebike" element={<Ebikeform/>}/>
       </Routes>
       <Footer/>
     </div>

@@ -1,7 +1,8 @@
 import {Figure} from 'react-bootstrap'
 import landing from '../assets/images/ourworklanding.jpeg'
-import ebikeprogramcode from '../assets/images/ebikeprogramcode.png'
+import ebikeprogramcode from '../assets/images/ebikeqrcodenew.png'
 import uarklogo from '../assets/images/uarklogo.png'
+import {Link} from 'react-router'
 
 
 
@@ -12,7 +13,7 @@ function OurWork() {
   {
     src: ebikeprogramcode,
     alt: 'Apply for the Tri-Region E-Bike Program e-bike voucher',
-    href: 'https://www.nwarpc.org/bicycle-and-pedestrian/ebike-ar/',
+    to: '/ebike',
     active: true,
   },
  ]
@@ -24,7 +25,7 @@ function OurWork() {
           <Figure.Image src={landing} />
             <Figure.Caption>
             <h1>OUR WORK</h1>
-            <p>Rdie Within Reach is dedicated to constantly evolving and finding new ways to advocate for the mountain biking community</p>
+            <p>Ride Within Reach is dedicated to constantly evolving and finding new ways to advocate for the mountain biking community</p>
             </Figure.Caption>
          </Figure>   
       </div>
@@ -50,9 +51,16 @@ function OurWork() {
       </div>  
     <div className="partner-cards">
       {PARTNER_CARDS.filter(card => card.active).map(card => (
-        <a key={card.href} href={card.href} target="_blank" rel="noopener noreferrer">
-          <img src={card.src} alt={card.alt} />
-        </a> 
+        card.to ? (
+          <Link key={card.to} to={card.to}>
+            <img src={card.src} alt={card.alt} />
+          </Link>
+        ) : (
+
+          <a key={card.href} href={card.href} target="_blank" rel="noopener noreferrer">
+            <img src={card.src} alt={card.alt} />
+          </a> 
+        )
       ))}     
     </div>
     </section>
