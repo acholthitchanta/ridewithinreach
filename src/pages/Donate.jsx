@@ -22,8 +22,24 @@ const DONATION_TIERS = [
 function Donate() {
   const [tierIndex, setTierIndex] = useState(0)
   const [percent, setPercent] = useState(0)
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia('(max-width: 700px)').matches)
+    useEffect(() => {
+      const query = window.matchMedia('(max-width: 700px)')
+      const handleChange = (e) => setIsMobile(e.matches)
+      query.addEventListener('change', handleChange)
+      return () => query.removeEventListener('change', handleChange)
+      
+    }, [])
   const scrollSectionRef = useRef(null)
-  const currentTier = DONATION_TIERS[tierIndex]
+  const donorboxRef = useRef(null)
+  useEffect(() => {
+    const container = donorboxRef.current
+    if (!container) return
+    container.innerHTML =
+      '<dbox-widget campaign="ridewithinreach" type="donation_form" enable-auto-scroll="true"></dbox-widget>'
+    return () => {container.innerHTML = ''}
+    }, [])
+   const currentTier = DONATION_TIERS[tierIndex]
 
   const [lastImage, setLastImage] = useState(null)
   useEffect(() => {
@@ -39,7 +55,7 @@ function Donate() {
       if (!section) return
 
       const rect = section.getBoundingClientRect()
-      const scrollableHeight = rect.height - window.innerHeight
+      const scrollableHeight = rect.height
       const startOffset = window.innerHeight * 0.25
       const progress = scrollableHeight > 0
         ? Math.min(1, Math.max(0, (startOffset - rect.top) / scrollableHeight))
@@ -79,7 +95,7 @@ function Donate() {
   <div
     className="donation-scroll-section"
     ref={scrollSectionRef}
-    style={{ height: '350vh' }}
+    style={{ height: '250vh' }}
 
   >
     <div className="donation-scroll-sticky">
@@ -121,19 +137,40 @@ function Donate() {
           </div>
         </div>
       </div>
-      <div 
-      className="tier-image"
+  {!isMobile && (
+    <div className="tier-image"
       style={{ top: `${(tierIndex / (DONATION_TIERS.length - 1)) * 100}%` , opacity: currentTier.image ? 1 : 0,}}
       >
       {lastImage &&( <img src={lastImage.src} alt={currentTier.amount} style={{transform: `scale(${lastImage.scale})`}}/>)}
       
       </div>
+  )}
       </div>
-      
   </div>
+
+    <div
+    style={isMobile ? {
+      display: 'flex',
+      justifyContent: 'center',
+      padding: '0 1rem 3rem',
+      marginTop: '16rem',
+    } : {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      paddingRight: '10%',
+      paddingBottom: '3rem',
+      marginTop: 'calc(15rem + 22vw - 41.67vh)',
+      position: 'relative',
+      zIndex: 1,
+    }}
+  >
+    <div ref={donorboxRef} style={{ zoom: isMobile ? 1 : 1.3 }} />
+  </div>
+
+
   <div className="spacer" style={{height: '1vh'}}/>
-    
   </section>
+
 </div>
   )
 }
